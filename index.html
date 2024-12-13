@@ -1,0 +1,411 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>AMICO CHITFUND PRIVATE LMITED</title>
+    <style>
+        body {
+               background-color:Turquoise;
+              
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center
+        }
+
+ /* Style for the slideshow container */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Hide all images by default */
+        .mySlides {
+            display: none;
+            width: 100%;
+            height: 400px; /* You can adjust the height */
+        }
+
+        /* Optional: Add a transition effect */
+        .fade {
+            animation: fadeEffect 1.5s ease-in-out;
+        }
+
+        @keyframes fadeEffect {
+            from {
+                opacity: 0.4;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+
+
+        .tables-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 20px; 
+            
+        }
+        table {
+            width: 30%;
+            border-collapse: collapse;
+            margin-bottom:30 
+            
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: lightblue;
+        }
+        h1 {
+            text-align: center;
+            color:green; 
+                       
+        }
+
+        h2 {
+            text-align: center;
+            color:Black;
+             text-align: center;
+            color: black;
+        }
+
+        select {
+            display: block; /* Ensures the select element behaves like a block */
+            width: 200px; /* Adjust the width of the dropdown */
+            padding: 10px; /* Adds space inside the select box */
+            margin: 20px auto; /* Centers the select box horizontally */
+            font-size: 16px; /* Adjusts the font size */
+            border: 1px solid #ccc; /* Adds a border around the select list */
+            border-radius: 5px; /* Rounds the corners of the select box */
+            background-color: #f9f9f9; /* Sets the background color */
+            cursor: pointer; /* Makes the select box behave like a clickable element */
+        }
+
+        select:hover {
+            background-color: #f1f1f1; /* Changes the background color when hovering */
+        }
+
+        option {
+            padding: 10px; /* Adds space around the options inside the dropdown */
+        }
+       
+
+
+        input[type="number"] {
+            width: 80px;
+            padding: 5px;
+            text-align: center;
+        }
+        .summary {
+            margin-top: 20px;
+        }
+        .denomination-summary {
+            margin-top: 20px;
+            width: 100%;
+            margin-top: 30px;
+        }
+        .denomination-summary table {
+            width: 100%;
+        }
+        
+       {
+            margin: 0;
+            height: 100vh; /* Ensure the body takes the full height of the screen */
+        }
+
+        .date-container {
+            position: absolute;
+            top: 10px; /* Adjust the distance from the top */
+            right: 10px; /* Adjust the distance from the right edge */
+        }
+
+        input[type="date"] {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        input[type="date"]:hover {
+            background-color: #f1f1f1; /* Change background on hover */
+        
+
+    </style>
+</head>
+
+<body>
+
+<div class="slideshow-container">
+
+        <!-- Slides -->
+        <div class="mySlides fade">
+            <img src="https://assets.onecompiler.app/432my39s6/432mxqpgm/download%20(1).png" alt="Slide 1">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="https://assets.onecompiler.app/432my39s6/432mxqpgm/shanmuga.jpg" alt="Slide 2">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="https://assets.onecompiler.app/432my39s6/432mxqpgm/Directoers.jpg" alt="Slide 3">
+        </div>
+
+        <!-- Add more slides as needed -->
+
+    </div>
+
+    <script>
+        // JavaScript to control the slideshow
+        let slideIndex = 0;
+
+        // Function to show slides
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            
+            // Hide all slides initially
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            // Show the current slide
+            slides[slideIndex - 1].style.display = "block";
+
+            // Call the function again after 3 seconds
+            setTimeout(showSlides, 5000); // 5000 milliseconds = 5 seconds
+        }
+
+        // Initialize the slideshow
+        showSlides();
+    </script>
+
+  <img src="https://assets.onecompiler.app/432my39s6/432mxqpgm/download%20(1).png" alt="Company Logo">
+
+ <div class="date-container">
+        <label for="date">Select a Date:</label>
+        <input type="date" id="date" name="date">
+    </div>
+
+    <div class="tables-container">
+        <!-- Office 1 Table -->
+        <div>
+            <h2>Collection route 1</h2>
+    <h4> Today duty Staff Name</h4>
+ <select id="Staff"" name="Name">
+        <option value="Manimaran">Manimaran</option>
+        <option value="Balasubramani">Balasubramani</option>
+        <option value="Mohan raj">Mohan raj</option>
+    </select>
+
+        <table>
+                <thead>
+                    <tr>
+                        <th>Denomination</th>
+                        <th>Quantity</th>
+                        <th>Total Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>₹500</td><td><input type="number" value="0" min="0" id="office1_qty500" oninput="updateTotals()"></td><td id="office1_total500">₹0</td></tr>
+                    <tr><td>₹200</td><td><input type="number" value="0" min="0" id="office1_qty200" oninput="updateTotals()"></td><td id="office1_total200">₹0</td></tr>
+                    <tr><td>₹100</td><td><input type="number" value="0" min="0" id="office1_qty100" oninput="updateTotals()"></td><td id="office1_total100">₹0</td></tr>
+                    <tr><td>₹50</td><td><input type="number" value="0" min="0" id="office1_qty50" oninput="updateTotals()"></td><td id="office1_total50">₹0</td></tr>
+                    <tr><td>₹20</td><td><input type="number" value="0" min="0" id="office1_qty20" oninput="updateTotals()"></td><td id="office1_total20">₹0</td></tr>
+                    <tr><td>₹10</td><td><input type="number" value="0" min="0" id="office1_qty10" oninput="updateTotals()"></td><td id="office1_total10">₹0</td></tr>
+                    <tr><td>₹5</td><td><input type="number" value="0" min="0" id="office1_qty5" oninput="updateTotals()"></td><td id="office1_total5">₹0</td></tr>
+                    <tr><td>₹2</td><td><input type="number" value="0" min="0" id="office1_qty2" oninput="updateTotals()"></td><td id="office1_total2">₹0</td></tr>
+                    <tr><td>₹1</td><td><input type="number" value="0" min="0" id="office1_qty1" oninput="updateTotals()"></td><td id="office1_total1">₹0</td></tr>
+                </tbody>
+                <tfoot>
+                    <tr><td><strong>Total Value</strong></td><td></td><td id="office1_grand_total">₹0</td></tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <!-- Office 2 Table -->
+        <div>
+            <h2>Collection route 2</h2>
+   <h4> Today duty Staff Name</h4>
+ <select id="Staff"" name="Name">
+        <option value="Manimaran">Manimaran</option>
+        <option value="Balasubramani">Balasubramani</option>
+        <option value="Mohan raj">Mohan raj</option>
+    </select>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Denomination</th>
+                        <th>Quantity</th>
+                        <th>Total Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>₹500</td><td><input type="number" value="0" min="0" id="office2_qty500" oninput="updateTotals()"></td><td id="office2_total500">₹0</td></tr>
+                    <tr><td>₹200</td><td><input type="number" value="0" min="0" id="office2_qty200" oninput="updateTotals()"></td><td id="office2_total200">₹0</td></tr>
+                    <tr><td>₹100</td><td><input type="number" value="0" min="0" id="office2_qty100" oninput="updateTotals()"></td><td id="office2_total100">₹0</td></tr>
+                    <tr><td>₹50</td><td><input type="number" value="0" min="0" id="office2_qty50" oninput="updateTotals()"></td><td id="office2_total50">₹0</td></tr>
+                    <tr><td>₹20</td><td><input type="number" value="0" min="0" id="office2_qty20" oninput="updateTotals()"></td><td id="office2_total20">₹0</td></tr>
+                    <tr><td>₹10</td><td><input type="number" value="0" min="0" id="office2_qty10" oninput="updateTotals()"></td><td id="office2_total10">₹0</td></tr>
+                    <tr><td>₹5</td><td><input type="number" value="0" min="0" id="office2_qty5" oninput="updateTotals()"></td><td id="office2_total5">₹0</td></tr>
+                    <tr><td>₹2</td><td><input type="number" value="0" min="0" id="office2_qty2" oninput="updateTotals()"></td><td id="office2_total2">₹0</td></tr>
+                    <tr><td>₹1</td><td><input type="number" value="0" min="0" id="office2_qty1" oninput="updateTotals()"></td><td id="office2_total1">₹0</td></tr>
+                </tbody>
+                <tfoot>
+                    <tr><td><strong>Total Value</strong></td><td></td><td id="office2_grand_total">₹0</td></tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <!-- Office 3 Table -->
+        <div>
+            <h2>Office cash in hand</h2>
+          <h4> Today duty cashier Name</h4>
+ <select id="Cashier"" name="Name">
+        <option value="Shanmuganathan V">Shanmuganathan V</option>
+        <option value="PAndi">Pandi</option>
+       
+    </select>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Denomination</th>
+                        <th>Quantity</th>
+                        <th>Total Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>₹500</td><td><input type="number" value="0" min="0" id="office3_qty500" oninput="updateTotals()"></td><td id="office3_total500">₹0</td></tr>
+                    <tr><td>₹200</td><td><input type="number" value="0" min="0" id="office3_qty200" oninput="updateTotals()"></td><td id="office3_total200">₹0</td></tr>
+                    <tr><td>₹100</td><td><input type="number" value="0" min="0" id="office3_qty100" oninput="updateTotals()"></td><td id="office3_total100">₹0</td></tr>
+                    <tr><td>₹50</td><td><input type="number" value="0" min="0" id="office3_qty50" oninput="updateTotals()"></td><td id="office3_total50">₹0</td></tr>
+                    <tr><td>₹20</td><td><input type="number" value="0" min="0" id="office3_qty20" oninput="updateTotals()"></td><td id="office3_total20">₹0</td></tr>
+                    <tr><td>₹10</td><td><input type="number" value="0" min="0" id="office3_qty10" oninput="updateTotals()"></td><td id="office3_total10">₹0</td></tr>
+                    <tr><td>₹5</td><td><input type="number" value="0" min="0" id="office3_qty5" oninput="updateTotals()"></td><td id="office3_total5">₹0</td></tr>
+                    <tr><td>₹2</td><td><input type="number" value="0" min="0" id="office3_qty2" oninput="updateTotals()"></td><td id="office3_total2">₹0</td></tr>
+                    <tr><td>₹1</td><td><input type="number" value="0" min="0" id="office3_qty1" oninput="updateTotals()"></td><td id="office3_total1">₹0</td></tr>
+                </tbody>
+                <tfoot>
+                    <tr><td><strong>Total Value</strong></td><td></td><td id="office3_grand_total">₹0</td></tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <!-- Denomination Summary -->
+    <div class="denomination-summary">
+        <h3>Total Value Across All Offices</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Denomination</th>
+                    <th>Total Quantity</th>
+                    <th>Total Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>₹500</td><td id="total_qty_500">0</td><td id="total_value_500">₹0</td></tr>
+                <tr><td>₹200</td><td id="total_qty_200">0</td><td id="total_value_200">₹0</td></tr>
+                <tr><td>₹100</td><td id="total_qty_100">0</td><td id="total_value_100">₹0</td></tr>
+                <tr><td>₹50</td><td id="total_qty_50">0</td><td id="total_value_50">₹0</td></tr>
+                <tr><td>₹20</td><td id="total_qty_20">0</td><td id="total_value_20">₹0</td></tr>
+                <tr><td>₹10</td><td id="total_qty_10">0</td><td id="total_value_10">₹0</td></tr>
+                <tr><td>₹5</td><td id="total_qty_5">0</td><td id="total_value_5">₹0</td></tr>
+                <tr><td>₹2</td><td id="total_qty_2">0</td><td id="total_value_2">₹0</td></tr>
+                <tr><td>₹1</td><td id="total_qty_1">0</td><td id="total_value_1">₹0</td></tr>
+            </tbody>
+	    <tfoot>
+                    <tr><td><strong>Total Value</strong></td><td></td><td id="grand_total">₹0</td></tr>
+            </tfoot>
+
+           </table>
+	    
+</div>
+
+    <script>
+       function updateTotals() {
+    const offices = [1, 2, 3];
+    const denominations = [500, 200, 100, 50, 20, 10, 5, 2, 1];
+    let grandTotal = 0;
+    const totalQuantities = {
+        500: 0,
+        200: 0,
+        100: 0,
+        50: 0,
+        20: 0,
+        10: 0,
+        5: 0,
+        2: 0,
+        1: 0
+    };
+    const totalValues = {
+        500: 0,
+        200: 0,
+        100: 0,
+        50: 0,
+        20: 0,
+        10: 0,
+        5: 0,
+        2: 0,
+        1: 0
+    };
+
+    offices.forEach(office => {
+        let officeTotal = 0;
+        denominations.forEach(denomination => {
+            const qty = parseInt(document.getElementById(`office${office}_qty${denomination}`).value) || 0;
+            const total = qty * denomination;
+            document.getElementById(`office${office}_total${denomination}`).textContent = '₹' + total.toLocaleString();
+
+            // Update total quantity and value for each denomination
+            totalQuantities[denomination] += qty;
+            totalValues[denomination] += total;
+
+            // Add to office total
+            officeTotal += total;
+        });
+
+        // Update each office total value
+        document.getElementById(`office${office}_grand_total`).textContent = '₹' + officeTotal.toLocaleString();
+        grandTotal += officeTotal;
+    });
+
+    // Update Total Quantities and Total Value for Each Denomination
+    Object.keys(totalQuantities).forEach(denomination => {
+        document.getElementById(`total_qty_${denomination}`).textContent = totalQuantities[denomination];
+        document.getElementById(`total_value_${denomination}`).textContent = '₹' + totalValues[denomination].toLocaleString();
+    });
+
+    // Update the Grand Total value across all offices
+    document.getElementById('grand_total').textContent = '₹' + grandTotal.toLocaleString();
+
+}
+
+
+    </script>
+
+<form action="nextpage.html" method="get">
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>
